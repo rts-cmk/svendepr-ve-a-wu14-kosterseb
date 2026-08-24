@@ -2,9 +2,11 @@
 
 This is the assignment for Svendeprøve by Sebastian Køster
 
+- Repository: https://github.com/rts-cmk/svendepr-ve-a-wu14-kosterseb
+- Project board: https://github.com/orgs/rts-cmk/projects/9/views/1
+
 
 <img src="assets/headers/mainHeader.jpg" alt="Documentation Header" width="960">
----
 
 ## 1. Running the project
 
