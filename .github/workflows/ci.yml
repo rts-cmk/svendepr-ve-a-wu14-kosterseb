@@ -16,13 +16,13 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: nightclub/package-lock.json
+          cache-dependency-path: xtreme-fitness-app/package-lock.json
       - name: Install dependencies
         run: npm ci
-        working-directory: nightclub
+        working-directory: xtreme-fitness-app
       - name: Run ESLint
         run: npm run lint
-        working-directory: nightclub
+        working-directory: xtreme-fitness-app
 
   format:
     name: Format
@@ -33,14 +33,14 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: nightclub/package-lock.json
+          cache-dependency-path: xtreme-fitness-app/package-lock.json
       - name: Install dependencies
         run: npm ci
-        working-directory: nightclub
+        working-directory: xtreme-fitness-app
       # Catches nothing the other jobs do: they both pass on badly formatted code.
       - name: Check formatting
         run: npm run format:check
-        working-directory: nightclub
+        working-directory: xtreme-fitness-app
 
   build:
     name: Build
@@ -51,10 +51,10 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: nightclub/package-lock.json
+          cache-dependency-path: xtreme-fitness-app/package-lock.json
       - name: Install dependencies
         run: npm ci
-        working-directory: nightclub
+        working-directory: xtreme-fitness-app
       # Also type-checks: next build fails on TypeScript errors.
       # No API needed — the pages that fetch are dynamic, so nothing runs at build time.
       - name: Build
@@ -70,17 +70,17 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: api/package-lock.json
+          cache-dependency-path: xtreme-fitness-api/package-lock.json
       - name: Install API dependencies
         run: npm ci
-        working-directory: api
+        working-directory: xtreme-fitness-api
       - name: Start the API
         run: nohup npm start &
-        working-directory: api
+        working-directory: xtreme-fitness-api
       - name: Wait for the API to answer
         run: |
           for attempt in $(seq 1 30); do
-            if curl -sf http://localhost:4000/events > /dev/null; then
+            if curl -sf http://localhost:4000/ > /dev/null; then
               echo "API is up after ${attempt}s"
               exit 0
             fi
