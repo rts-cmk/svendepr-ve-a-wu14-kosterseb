@@ -1,0 +1,14 @@
+{
+    "name": "XtremeFitnessApp",
+    "version": "1.0.0",
+    "scripts": {
+        "dev:next": "next dev",
+        "dev:api": "node ./xtreme-fitness-api/",
+        "dev": "concurrently \"cd xtreme-fitness-api && npm run dev\" \"cd xtreme-fitness-app && npm run dev\"",
+        "build": "next build",
+        "start": "next start"
+    },
+    "devDependencies": {
+        "prettier": "3.9.6"
+    }
+}
