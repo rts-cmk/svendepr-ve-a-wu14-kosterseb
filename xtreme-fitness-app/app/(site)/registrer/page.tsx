@@ -6,9 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function Registrer() {
-    return (
-        <>
-        registrer side
-        </>
-    )
+  return <>registrer side</>;
 }

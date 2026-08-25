@@ -6,9 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function Priser() {
-    return (
-        <>
-        pris side
-        </>
-    )
+  return <>pris side</>;
 }

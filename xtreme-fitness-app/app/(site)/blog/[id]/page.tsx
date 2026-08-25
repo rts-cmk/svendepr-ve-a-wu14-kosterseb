@@ -14,9 +14,5 @@
 // }
 
 export default async function BlogPostPage({}) {
-    return (
-        <>
-        blog indlæg side
-        </>
-    )
+  return <>blog indlæg side</>;
 }

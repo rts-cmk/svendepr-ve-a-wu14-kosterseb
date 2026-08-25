@@ -6,9 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function MinSide() {
-    return (
-        <>
-        Min side
-        </>
-    )
+  return <>Min side</>;
 }
