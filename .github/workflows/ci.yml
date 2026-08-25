@@ -59,7 +59,7 @@ jobs:
       # No API needed — the pages that fetch are dynamic, so nothing runs at build time.
       - name: Build
         run: npm run build
-        working-directory: nightclub
+        working-directory: xtreme-fitness-app
 
   api:
     name: API contract
