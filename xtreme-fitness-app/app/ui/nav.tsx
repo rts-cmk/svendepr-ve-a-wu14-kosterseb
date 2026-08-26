@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Container from "./container";
 
 const PUBLIC_LINKS = [
   { href: "/", label: "Forside" },
@@ -19,6 +20,7 @@ export default function Nav() {
   return (
     <>
       <nav className="sticky top-0 z-50">
+        <Container>
         <ul className="flex justify-between py-4">
           {link.map((link) => {
             return (
@@ -30,6 +32,7 @@ export default function Nav() {
             );
           })}
         </ul>
+        </Container>
       </nav>
     </>
   );

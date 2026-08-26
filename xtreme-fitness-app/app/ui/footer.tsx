@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Container from "./container";
 
 const OPENING_HOURS = [
   { day: "Mandag-Fredag", hours: "12.00 - 14.00" },
@@ -21,10 +22,38 @@ const CONTACT_INFO = {
   phone: "+ 45 99751642",
 };
 
+function ColumnHeading({ children }: { children: string }) {
+  <h2 className="">
+    {children}
+  </h2>
+}
+
 export default function Footer() {
   return (
     <>
-      <footer></footer>
+      <footer>
+        <div>
+          <Image 
+          src="/icons/footer_left_icon.png"
+          width={400}
+          height={400}
+          alt="footer left icon"
+          className=""
+          priority
+          />
+        </div>
+
+        <div>
+          <Image
+          src="/icons/footer_right_icon.png"
+          width={400}
+          height={400}
+          alt="footer right icon"
+          className=""
+          priority
+          />
+        </div>
+      </footer>
     </>
   );
 }
