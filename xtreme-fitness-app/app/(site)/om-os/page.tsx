@@ -6,9 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function OmOs() {
-    return (
-        <>
-        Om os side
-        </>
-    )
+  return <>Om os side</>;
 }

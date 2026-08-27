@@ -6,9 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-    return (
-        <>
-        Blog side
-        </>
-    )
+  return <>Blog side</>;
 }

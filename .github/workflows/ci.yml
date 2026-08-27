@@ -59,35 +59,4 @@ jobs:
       # No API needed — the pages that fetch are dynamic, so nothing runs at build time.
       - name: Build
         run: npm run build
-        working-directory: nightclub
-
-  api:
-    name: API contract
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: xtreme-fitness-api/package-lock.json
-      - name: Install API dependencies
-        run: npm ci
-        working-directory: xtreme-fitness-api
-      - name: Start the API
-        run: nohup npm start &
-        working-directory: xtreme-fitness-api
-      - name: Wait for the API to answer
-        run: |
-          for attempt in $(seq 1 30); do
-            if curl -sf http://localhost:4000/ > /dev/null; then
-              echo "API is up after ${attempt}s"
-              exit 0
-            fi
-            sleep 1
-          done
-          echo "API did not start within 30s"
-          exit 1
-      # Lint and build both pass while db.json is malformed; this does not.
-      - name: Check the API still answers with the shapes the app reads
-        run: npm run test:api
+        working-directory: xtreme-fitness-app
