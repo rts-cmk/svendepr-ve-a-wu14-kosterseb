@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: "Xtreme Fitness",
     template: "%s | Xtreme Fitness",
   },
-  description: "Xtreme Fitness - Fitness for alle til en god pris",
+  description: "Xtreme Fitness Fitness for alle til en god pris",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
