@@ -1,15 +1,10 @@
 import Image from "next/image";
-import Section from "@/app/ui/section"
+import Section from "@/app/ui/section";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans">
-      <Image
-        src="/headers/mainHeader.jpg"
-        width={1900}
-        height={10} 
-        alt={""}      
-        />
+      <Image src="/headers/mainHeader.jpg" width={1900} height={10} alt={""} />
       <h1 className="text-4xl font-bold">XtremeFitness</h1>
       <h1 className="text-4xl font-bold">XtremeFitness</h1>
       <h1 className="text-4xl font-bold">XtremeFitness</h1>
@@ -38,7 +33,6 @@ export default function Home() {
       <h1 className="text-4xl font-bold">XtremeFitness</h1>
       <h1 className="text-4xl font-bold">XtremeFitness</h1>
       <h1 className="text-4xl font-bold">XtremeFitness</h1>
-      
     </div>
   );
 }

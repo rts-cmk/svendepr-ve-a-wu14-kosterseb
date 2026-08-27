@@ -21,29 +21,31 @@ export default function Nav() {
     <header>
       <nav className="top-0 z-50 sticky">
         <Container>
-        <ul className="absolute flex py-8 px-100">
-          <Link href={"/"} >
-          <Image 
-          src="/icons/logo.png"
-          width={200}
-          height={100}
-          className="absolute inset-x-0 pl-10"
-          alt="logo"
-          />
-          </Link>
-          {link.map((link) => {
-            return (
-              <li key={link.href}>
-                <Link href={link.href} 
-                className="block whitespace-nowrap px-8 py-8 text-white transition-colors">
-                  {link.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+          <ul className="absolute flex py-8 px-100">
+            <Link href={"/"}>
+              <Image
+                src="/icons/logo.png"
+                width={200}
+                height={100}
+                className="absolute inset-x-0 pl-10"
+                alt="logo"
+              />
+            </Link>
+            {link.map((link) => {
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="block whitespace-nowrap px-8 py-8 text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </Container>
       </nav>
-      </header>
+    </header>
   );
 }

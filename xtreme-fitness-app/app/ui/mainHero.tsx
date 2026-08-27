@@ -1,3 +1,3 @@
 import Image from "next/image";
 
-const Background = ["/"]
+const Background = ["/"];

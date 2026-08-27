@@ -2,7 +2,6 @@
 
 @theme {
   --color-bg: #ededed;
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,8 +11,7 @@
   }
 }
 
-@layer base{
-body {
-  
+@layer base {
+  body {
   }
 }
